@@ -8,6 +8,8 @@ var ipaddress=process.env.OPENSHIFT_NODEJS_IP || "127.0.0.1";
 app.set('port',port);
 app.set('ipaddr',ipaddress);
 
+console.log("starting server at ip - port: " + ipaddress + " : " + port);
+
 var server = app.listen(app.get('port'), function() {
   debug('Express server listening on port ' + server.address().port);
 });
